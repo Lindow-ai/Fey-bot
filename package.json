@@ -1,0 +1,12 @@
+{
+  "name": "projet",
+  "version": "0.1.0",
+  "description": "Projet Discord Valnuit ",
+  "main": "main.js",
+  "repository": "https://github.com/Lindow-ai/Fey-bot.git",
+  "author": "<remy.lefoll98@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "discordjs/discord.js"
+  }
+}
