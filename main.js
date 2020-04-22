@@ -10,12 +10,12 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`)
   client.commands.set(command.name, command)
-  console.log(client.commands)
+  console.log(`Commande chargée: ${command.name}`)
 }
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
-});
+})
 
 client.on('message', message => {
   if (!message.content.startsWith(PREFIX) || message.author.bot) return;
@@ -23,7 +23,7 @@ client.on('message', message => {
   const command = args.shift().toLowerCase()
 
   if (!client.commands.has(command)) return
-  client.commands.get(command).execute(message, args)
+  client.commands.get(command).execute(client, message, args)
 })
 
 client.login(TOKEN)
