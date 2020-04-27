@@ -4,5 +4,6 @@
   
   module.exports.help = {
     name: "ping",
-    description: "Renvoie pong!"
+    description: "Renvoie pong!",
+    args: false
   }
