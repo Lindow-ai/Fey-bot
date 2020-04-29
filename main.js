@@ -24,8 +24,8 @@ client.on('message', message => {
   const args = message.content.slice(PREFIX.length).split(/ +/)
   const commandName = args.shift().toLowerCase()
 
-  if (!client.commands.has(commandName)) return
-  const command = client.commands.get(commandName)
+  const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName))
+  if (!command) return
 
   if (command.help.args && !args.length) {
     let noArgsReply = `Il nous faut des arguments pour cette commande, ${message.author}!`
@@ -42,7 +42,6 @@ client.on('message', message => {
   const timeNow = Date.now()
   const tStamps = client.cooldowns.get(command.help.name)
   const cdAmount = (command.help.cooldown || 5) * 1000
-  console.log(client.cooldowns)
 
   if (tStamps.has(message.author.id)) {
     const cdExpirationTime = tStamps.get(message.author.id) + cdAmount
