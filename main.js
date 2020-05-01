@@ -1,3 +1,4 @@
+  
 const { Client, Collection } = require('discord.js')
 const { TOKEN, PREFIX } = require('./config')
 const { readdirSync } = require("fs")
@@ -25,7 +26,9 @@ client.on('message', message => {
   const commandName = args.shift().toLowerCase()
 
   const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName))
-  if (!command) return
+  if (!command) return;
+
+  if (command.help.permissions && !message.member.hasPermission('BAN_MEMBERS')) return message.reply("tu n'as pas les permissions pour taper cette commande.")
 
   if (command.help.args && !args.length) {
     let noArgsReply = `Il nous faut des arguments pour cette commande, ${message.author}!`
@@ -39,7 +42,7 @@ client.on('message', message => {
     client.cooldowns.set(command.help.name, new Collection())
   }
 
-  const timeNow = Date.now()
+  const timeNow = Date.now();
   const tStamps = client.cooldowns.get(command.help.name)
   const cdAmount = (command.help.cooldown || 5) * 1000
 
@@ -47,8 +50,8 @@ client.on('message', message => {
     const cdExpirationTime = tStamps.get(message.author.id) + cdAmount
 
     if (timeNow < cdExpirationTime) {
-      timeLeft = (cdExpirationTime - timeNow) / 1000
-      return message.reply(`merci d'attendre ${timeLeft.toFixed(0)} seconde(S) avant de ré-utiliser la commande \`${command.help.name}\`.`)
+      timeLeft = (cdExpirationTime - timeNow) / 1000;
+      return message.reply(`merci d'attendre ${timeLeft.toFixed(0)} seconde(s) avant de ré-utiliser la commande \`${command.help.name}\`.`)
     }
   }
 
