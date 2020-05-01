@@ -9,6 +9,6 @@ module.exports.help = {
   description: "Renvoie pong!",
   cooldown: 10,
   usage: '',
-  permissions: true,
+  permissions: false,
   args: false
 };

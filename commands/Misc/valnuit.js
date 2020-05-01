@@ -10,5 +10,8 @@ module.exports.run = (client, message, args) => {
     name: "valnuit",
     description: "Valnuit présentation",
     cooldown : 10,
+    usage: '<votre_message>',
+    isUserAdmin: false,
+    permissions: false,
     args: false
   }

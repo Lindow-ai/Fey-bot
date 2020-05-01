@@ -28,6 +28,8 @@ client.on('message', message => {
   const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName))
   if (!command) return;
 
+  if (command.help.isUserAdmin && message.guild.member(message.mentions.users.first()).hasPermission('BAN_MEMBERS')) return message.reply("tu ne peux pas utiliser cette commande sur cette utilisateur.")
+
   if (command.help.permissions && !message.member.hasPermission('BAN_MEMBERS')) return message.reply("tu n'as pas les permissions pour taper cette commande.")
 
   if (command.help.args && !args.length) {

@@ -8,6 +8,7 @@ module.exports.run = (client, message, args) => {
     description: "Répéte le message d'un utilisateur",
     cooldown: 10,
     usage: '<votre_message>',
-    permissions: true,
+    isUserAdmin: false,
+    permissions: false,
     args: true
   }
