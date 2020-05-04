@@ -21,7 +21,7 @@ module.exports.run = (client, message, args) => {
     aliases: ['ban'],
     description: "Ban un utilisateur",
     cooldown: 10,
-    usage: '<votre_message>',
+    usage: '<@user> <raison>',
     isUserAdmin : true,
     permissions: true,
     args: true
