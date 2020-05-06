@@ -24,9 +24,11 @@ module.exports.run = (client, message, args) => {
   
   module.exports.help = {
     name: "valnuit",
+    aliases: ['valnuit'],
+    category: 'misc',
     description: "Valnuit présentation",
     cooldown : 10,
-    usage: '<votre_message>',
+    usage: '',
     isUserAdmin: false,
     permissions: false,
     args: false
