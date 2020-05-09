@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
   
   const embed = new MessageEmbed()
   .setAuthor(`${user.user.username} (${user.id})`)
-  .setColor("#ffa500")
+  .setColor("#287db5")
   .setDescription(`**Action**: mute\n**Temps**: ${ms(ms(muteTime))}`)
   .setThumbnail(user.user.avatarURL())
   .setTimestamp()

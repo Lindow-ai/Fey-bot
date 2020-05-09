@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
 
     const embed = new MessageEmbed()
     .setAuthor(`${user.username} (${user.id})`)
-    .setColor("#dc143c")
+    .setColor("#35f092")
     .setDescription(`**Action**: unban`)
     .setThumbnail(user.avatarURL())
     .setTimestamp()
