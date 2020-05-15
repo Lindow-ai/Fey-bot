@@ -11,5 +11,6 @@ module.exports.help = {
   cooldown: 10,
   usage: '',
   permissions: false,
+  isUserAdmin: false,
   args: false
 };
