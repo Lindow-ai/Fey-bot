@@ -1,3 +1,4 @@
+const { MESSAGES } = require('../../util/constants')
 const { MessageEmbed } = require('discord.js')
 
 module.exports.run = (client, message, args) => {
@@ -22,14 +23,5 @@ module.exports.run = (client, message, args) => {
     message.channel.send(embed)
   }
   
-  module.exports.help = {
-    name: "valnuit",
-    aliases: ['valnuit'],
-    category: 'misc',
-    description: "Valnuit présentation",
-    cooldown : 10,
-    usage: '',
-    isUserAdmin: false,
-    permissions: false,
-    args: false
-  }
+  module.exports.help = MESSAGES.COMMANDS.MISC.VALNUIT
+

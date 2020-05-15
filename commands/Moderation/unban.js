@@ -1,4 +1,5 @@
 const { MessageEmbed } = require('discord.js')
+const { MESSAGES } = require('../../util/constants')
 
 module.exports.run = async (client, message, args) => {
     const user = await client.users.fetch(args[0]) 
@@ -16,14 +17,4 @@ module.exports.run = async (client, message, args) => {
     client.channels.cache.get('685819141524946954').send(embed)
   }
   
-  module.exports.help = {
-    name: "unban",
-    aliases: ['unban'],
-    category: 'moderation',
-    description: "Unban un utilisateur",
-    cooldown: 10,
-    usage: '<user_id>',
-    isUserAdmin : false,
-    permissions: true,
-    args: true
-  }
+  module.exports.help = MESSAGES.COMMANDS.MODERATION.UNBAN

@@ -1,4 +1,5 @@
 const { MessageEmbed } = require('discord.js')
+const { MESSAGES } = require('../../util/constants')
 
 module.exports.run = (client, message, args) => {
     const user = message.mentions.users.first() 
@@ -16,14 +17,4 @@ module.exports.run = (client, message, args) => {
     client.channels.cache.get('685819141524946954').send(embed)
   }
   
-  module.exports.help = {
-    name: "kick",
-    aliases: ['kick'],
-    category: 'moderation',
-    description: "Kick un utilisateur",
-    cooldown: 10,
-    usage: '<@user> <raison>',
-    isUserAdmin : true,
-    permissions: true,
-    args: true
-  }
+  module.exports.help = MESSAGES.COMMANDS.MODERATION.KICK

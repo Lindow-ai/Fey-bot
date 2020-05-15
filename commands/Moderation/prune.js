@@ -1,5 +1,6 @@
 
 const { MessageEmbed } = require("discord.js")
+const { MESSAGES } = require('../../util/constants')
 
 module.exports.run = async (client, message, args) => {
   let user = message.guild.member(message.mentions.users.first())
@@ -27,14 +28,4 @@ module.exports.run = async (client, message, args) => {
   client.channels.cache.get('685819141524946954').send(embed)
 };
 
-module.exports.help = {
-  name: "prune",
-  aliases: ['prune'],
-  category: 'moderation',
-  description: "Purge un nombre de message spécifié sur un utilisateur spécifié",
-  cooldown: 10,
-  usage: '<@user> <nbr_messages>',
-  isUserAdmin: true,
-  permissions: true,
-  args: true
-}
+module.exports.help = MESSAGES.COMMANDS.MODERATION.PRUNE

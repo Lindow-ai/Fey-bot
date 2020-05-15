@@ -1,4 +1,5 @@
 const { MessageEmbed } = require('discord.js')
+const { MESSAGES } = require('../../util/constants')
 
 module.exports.run = async (client, message, args) => {
     if (isNaN(args[0]) || (args[0] < 1 || args[0] > 100)) return message.reply('Il faut spécifier un ***nombre*** entre 1 et 100!') 
@@ -19,14 +20,4 @@ module.exports.run = async (client, message, args) => {
     client.channels.cache.get('685819141524946954').send(embed)
   }
   
-  module.exports.help = {
-    name: "purge",
-    aliases: ['purge'],
-    category: 'moderation',
-    description: "Purge un nombre de message spécifié",
-    cooldown: 10,
-    usage: '<nbr_messages>',
-    isUserAdmin : false,
-    permissions: true,
-    args: true
-  }
+  module.exports.help = MESSAGES.COMMANDS.MODERATION.PURGE
