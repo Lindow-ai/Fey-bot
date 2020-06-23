@@ -1,4 +1,4 @@
-module.exports = (client, messageReaction, user) => {
+module.exports = async (client, messageReaction, user) => {
   const message = messageReaction.message
   const member = message.guild.members.cache.get(user.id)
   const emoji = messageReaction.emoji.name
@@ -11,6 +11,11 @@ module.exports = (client, messageReaction, user) => {
     const joueureuseRole = message.guild.roles.cache.get('683652792493015042')
     const sportifveRole = message.guild.roles.cache.get('683652892200271914')
     if (member.user.bot) return
+
+    if (messageReaction.partial) {
+      await messageReaction.fetch();
+      return;
+    }
 
   if (['🖍️', '📸', '🎨', '🖋️', '🎼', '🎮', '⚽'].includes(emoji) && message.channel.id === channel.id) {
     switch (emoji) {
@@ -44,4 +49,8 @@ module.exports = (client, messageReaction, user) => {
                 break
     }
   }
+
+  if (emoji === '🟥') message.delete()
+  if (emoji === '🟦') message.reactions.removeAll()
+  if (emoji === '🟩') message.channel.send(`Afficher : 🟩`)
 }

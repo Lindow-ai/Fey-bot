@@ -160,6 +160,17 @@ const MESSAGES = {
                 permissions: true,
                 isUserAdmin: false,
                 args: false
+            },
+            EMOJI:  {
+                name: "emoji",
+                aliases: ['emoji'],
+                category: 'reactions',
+                description: "Renvoie des emojis sur notre message!",
+                cooldown: 0.1,
+                usage: '',
+                permissions: false,
+                isUserAdmin: false,
+                args: false
             }
         }
     }
