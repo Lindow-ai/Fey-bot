@@ -24,6 +24,30 @@ const MESSAGES = {
                 args: true
               }
         },
+        COLLECTORS: {
+            MSGCOLLECTOR: {
+                name: "msgcollector",
+                aliases: ['msgcollector', 'mcol'],
+                category: 'collectors',
+                description: "Message collector",
+                cooldown: 3,
+                usage: '<msg_to-collect>',
+                isUserAdmin: false,
+                permissions: true,
+                args: true
+            },
+            REACTCOLLECTOR: {
+                name: "reactcollector",
+                aliases: ['reactcollector', 'rcol'],
+                category: 'collectors',
+                description: "Message collector",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: true,
+                args: false
+            }
+        },
         MISC: {
             SAY: {
                 name: "say",
