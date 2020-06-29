@@ -22,6 +22,17 @@ const MESSAGES = {
                 isUserAdmin: false,
                 permissions: true,
                 args: true
+              },
+              RELOAD: {
+                name: "reload",
+                aliases: ['reload'],
+                category: 'admin',
+                description: "Relancer le bot",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: true,
+                args: false
               }
         },
         COLLECTORS: {
