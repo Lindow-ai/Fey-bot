@@ -71,6 +71,17 @@ const MESSAGES = {
                 permissions: false,
                 args: true
             },
+            STATS: {
+                name: "stats",
+                aliases: ['stats'],
+                category: 'misc',
+                description: "Renvoie des statistiques!",
+                cooldown: 4,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
             PING: {
                 name: "ping",
                 aliases: ['ping'],
