@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 
-module.exports = (client, member, message) => {
+module.exports = async (client, member, message) => {
 
     
 
@@ -27,4 +27,14 @@ module.exports = (client, member, message) => {
    
 
     client.channels.cache.get('674013879742758927').send(embed)
-  }
+
+    const newUser = {
+        guildID: member.guild.id,
+        guildName: member.guild.name,
+        userID: member.id,
+        username : member.user.tag,
+      }
+  
+      await client.createUser(newUser)
+    }
+    
