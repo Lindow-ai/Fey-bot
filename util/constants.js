@@ -59,6 +59,19 @@ const MESSAGES = {
                 args: false
             }
         },
+        EXPERIENCE: {
+            USEREXPERIENCE: {
+                name: "userexperience",
+                aliases: ['userexperience', 'uexp'],
+                category: 'experience',
+                description: "Renvoie l'expérience de l'utilisateur",
+                cooldown: 10,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+        },
         MISC: {
             SAY: {
                 name: "say",

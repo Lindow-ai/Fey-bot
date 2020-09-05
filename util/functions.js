@@ -44,4 +44,10 @@ module.exports = client => {
     }
     return data.updateOne(settings)
   }
+
+  client.updateExp = async (client, member, exp) => {
+    const userToUpdate = await client.getUser(member)
+    const updatedExp = userToUpdate.experience + exp
+    await client.updateUser(member, { experience: updatedExp })
+  }
 }
