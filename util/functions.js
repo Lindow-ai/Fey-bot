@@ -35,6 +35,12 @@ module.exports = client => {
     if (data) return data
     else return
   }
+
+  client.getUsers = async guild => {
+    const data = await User.find({ guildID: guild.id })
+    if (data) return data
+    else return
+  }
   
   client.updateUser = async (user, settings) => {
     let data = await client.getUser(user)
@@ -45,9 +51,16 @@ module.exports = client => {
     return data.updateOne(settings)
   }
 
-  client.updateExp = async (client, member, exp) => {
+  client.addExp = async (client, member, exp) => {
     const userToUpdate = await client.getUser(member)
     const updatedExp = userToUpdate.experience + exp
-    await client.updateUser(member, { experience: updatedExp })
+    await client.updateUser(member, { experience : updatedExp })
   }
+
+  client.removeExp = async (client, member, exp) => {
+    const userToUpdate = await client.getUser(member)
+    const updatedExp = userToUpdate.experience - exp
+    await client.updateUser(member, { experience : updatedExp })
+  }
+
 }

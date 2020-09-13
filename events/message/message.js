@@ -18,8 +18,14 @@ module.exports = async (client, message) => {
   const expToAdd = Math.floor(Math.random() * 25) + 10 // 10 - 35
 
   if (expCd >= 8 && expCd <= 11) {
-    message.reply(`Tu viens de gagner ${expToAdd} point d'expérience!`)
-    await client.updateExp(client, message.member, expToAdd)
+    await client.addExp(client, message.member, expToAdd)
+  }
+
+  const userLevel = Math.floor(0.1 * Math.sqrt(dbUser.experience))
+
+  if (dbUser.level < userLevel) {
+    message.reply(`Toute mes félicitations vous venez de mourir pour la 1er fois ou la 2ème ou la 3ème... Ou je sais plus ! Vous venez de passer au level ***${userLevel}*** ! Incroyable`)
+    client.updateUser(message.member, { level: userLevel })
   }
 
   if (!message.content.startsWith(settings.prefix)) return

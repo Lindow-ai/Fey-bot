@@ -60,6 +60,39 @@ const MESSAGES = {
             }
         },
         EXPERIENCE: {
+            REMOVEEXPERIENCE: {
+                name: "removeexperience",
+                aliases: ['removeexperience', 'remxp'],
+                category: 'experience',
+                description: "Enlever de l'expérience à l'utilisateur",
+                cooldown: 10,
+                usage: '<@user> <exp_to_remove>',
+                isUserAdmin: false,
+                permissions: true,
+                args: true
+            },
+            ADDEXPERIENCE: {
+                name: "addexperience",
+                aliases: ['addexperience', 'addxp'],
+                category: 'experience',
+                description: "Ajouter de l'expérience à l'utilisateur",
+                cooldown: 10,
+                usage: '<@user> <exp_to_add>',
+                isUserAdmin: false,
+                permissions: true,
+                args: true
+            },
+            LEADERBOARD: {
+                name: "leaderboard",
+                aliases: ['leaderboard', 'classement', 'leadxp'],
+                category: 'experience',
+                description: "Ajouter de l'expérience à l'utilisateur",
+                cooldown: 10,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
             USEREXPERIENCE: {
                 name: "userexperience",
                 aliases: ['userexperience', 'uexp'],
