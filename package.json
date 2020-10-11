@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "discordjs/discord.js",
+    "moment": "^2.29.1",
     "mongoose": "^5.9.15",
     "ms": "^2.1.2",
     "pm2": "^4.4.0"

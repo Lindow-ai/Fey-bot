@@ -106,6 +106,17 @@ const MESSAGES = {
             },
         },
         MISC: {
+            BOTINFO: {
+                name: "botinfo",
+                aliases: ['botinfo'],
+                category: 'misc',
+                description: "Renvoie des informations concernant le bot!",
+                cooldown: 4,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
             SAY: {
                 name: "say",
                 aliases: ['repeat', 'rep'],
@@ -117,13 +128,24 @@ const MESSAGES = {
                 permissions: false,
                 args: true
             },
-            STATS: {
-                name: "stats",
-                aliases: ['stats'],
+            SERVERINFO: {
+                name: "serverinfo",
+                aliases: ['serverinfo'],
                 category: 'misc',
-                description: "Renvoie des statistiques!",
+                description: "Renvoie des informations concernant le serveur!",
                 cooldown: 4,
                 usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            USERINFO: {
+                name: "userinfo",
+                aliases: ['userinfo'],
+                category: 'misc',
+                description: "Renvoie des informations concernant un utilisateur (ou vous-même)!",
+                cooldown: 4,
+                usage: '[<mentionned_user>]',
                 isUserAdmin: false,
                 permissions: false,
                 args: false
