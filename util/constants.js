@@ -35,6 +35,52 @@ const MESSAGES = {
                 args: false
               }
         },
+        ANIMALS: {
+            CAT: {
+                name: "cat",
+                aliases: ['cat', 'chat'],
+                category: 'animals',
+                description: "Renvoie une image de chat",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            DOG: {
+                name: "dog",
+                aliases: ['dog', 'chien'],
+                category: 'animals',
+                description: "Renvoie une image de chien",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            FOX: {
+                name: "fox",
+                aliases: ['fox', 'renard'],
+                category: 'animals',
+                description: "Renvoie une image de renard",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            ANIME: {
+                name: "anime",
+                aliases: ['anime', 'memes'],
+                category: 'animals',
+                description: "Renvoie des memes de type animes",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            }
+        },
         COLLECTORS: {
             MSGCOLLECTOR: {
                 name: "msgcollector",
@@ -106,12 +152,34 @@ const MESSAGES = {
             },
         },
         MISC: {
+            EIGHTBALL: {
+                name: "8ball",
+                aliases: ['8ball', 'question'],
+                category: 'misc',
+                description: "Renvoie une réponse à une question !",
+                cooldown: 4,
+                usage: '<question>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
             BOTINFO: {
                 name: "botinfo",
                 aliases: ['botinfo'],
                 category: 'misc',
                 description: "Renvoie des informations concernant le bot!",
                 cooldown: 4,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            DICE: {
+                name: "dice",
+                aliases: ['dice'],
+                category: 'misc',
+                description: "Renvoie la valeur de plusieurs dés!",
+                cooldown: 1,
                 usage: '',
                 isUserAdmin: false,
                 permissions: false,
@@ -160,6 +228,17 @@ const MESSAGES = {
                 permissions: false,
                 isUserAdmin: false,
                 args: false
+            },
+            POLL: {
+                name: "poll",
+                aliases: ['poll', 'sondage'],
+                category: 'misc',
+                description: "Renvoie un sondage!",
+                cooldown: 10,
+                usage: '<sondage>',
+                permissions: false,
+                isUserAdmin: false,
+                args: true
             },
             VALNUIT: {
                 name: "valnuit",
@@ -240,6 +319,17 @@ const MESSAGES = {
                 permissions: true,
                 args: true
             },
+            REPORT: {
+                name: "report",
+                aliases: ['report'],
+                category: 'moderation',
+                description: "Reporte un utilisateur",
+                cooldown: 10,
+                usage: '<nbr_messages>',
+                isUserAdmin : false,
+                permissions: false,
+                args: true
+            },
             UNBAN: {
                 name: "unban",
                 aliases: ['unban'],
@@ -261,6 +351,30 @@ const MESSAGES = {
                 isUserAdmin : true,
                 permissions: true,
                 args: true
+            }
+        },
+        PLAYER: {
+            PLAY: {
+                name: "play",
+                aliases: ['play', 'p'],
+                category: 'player',
+                description: "Jouer une musique",
+                cooldown: 10,
+                usage: '',
+                permissions: false,
+                isUserAdmin: false,
+                args: false
+            },
+            STOP: {
+                name: "stop",
+                aliases: ['stop', 's'],
+                category: 'player',
+                description: "Stopper une musique",
+                cooldown: 10,
+                usage: '',
+                permissions: false,
+                isUserAdmin: false,
+                args: false
             }
         },
         REACTIONS: {

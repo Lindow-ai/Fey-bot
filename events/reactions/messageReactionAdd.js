@@ -49,8 +49,4 @@ module.exports = async (client, messageReaction, user) => {
                 break
     }
   }
-
-  if (emoji === '🟥') message.delete()
-  if (emoji === '🟦') message.reactions.removeAll()
-  if (emoji === '🟩') message.channel.send(`Afficher : 🟩`)
 }

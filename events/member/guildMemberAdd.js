@@ -1,8 +1,11 @@
 const { MessageEmbed } = require('discord.js')
+const ms = require('ms')
 
 module.exports = async (client, member, message) => {
+  const settings = await client.getGuild(member.guild)
+  let msg = settings.welcomeMessage
 
-    
+  if (msg.includes('{{user}}')) msg = msg.replace('{{user}}', member)
 
     const embed = new MessageEmbed()
       .setAuthor(`${member.displayName} (${member.id})`)
@@ -24,9 +27,8 @@ module.exports = async (client, member, message) => {
         channel.send(embed)
     })
 
-   
-
     client.channels.cache.get('674013879742758927').send(embed)
+    client.channels.cache.get('674690228736360458').send(msg)
   
       await client.createUser({
         guildID: member.guild.id,
