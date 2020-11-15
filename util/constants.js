@@ -35,11 +35,11 @@ const MESSAGES = {
                 args: false
               }
         },
-        ANIMALS: {
+        ACTION: {
             CAT: {
                 name: "cat",
                 aliases: ['cat', 'chat'],
-                category: 'animals',
+                category: 'action',
                 description: "Renvoie une image de chat",
                 cooldown: 3,
                 usage: '',
@@ -50,7 +50,7 @@ const MESSAGES = {
             DOG: {
                 name: "dog",
                 aliases: ['dog', 'chien'],
-                category: 'animals',
+                category: 'action',
                 description: "Renvoie une image de chien",
                 cooldown: 3,
                 usage: '',
@@ -61,7 +61,7 @@ const MESSAGES = {
             FOX: {
                 name: "fox",
                 aliases: ['fox', 'renard'],
-                category: 'animals',
+                category: 'action',
                 description: "Renvoie une image de renard",
                 cooldown: 3,
                 usage: '',
@@ -70,16 +70,181 @@ const MESSAGES = {
                 args: false
             },
             ANIME: {
-                name: "anime",
+                name: "meme",
                 aliases: ['anime', 'memes'],
-                category: 'animals',
+                category: 'action',
                 description: "Renvoie des memes de type animes",
                 cooldown: 3,
                 usage: '',
                 isUserAdmin: false,
                 permissions: false,
                 args: false
-            }
+            },
+            SMILE: {
+                name: "smile",
+                aliases: ['smile'],
+                category: 'action',
+                description: "Renvoie des gifs smiles",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            CUDDLE: {
+                name: "cuddle",
+                aliases: ['cuddle'],
+                category: 'action',
+                description: "Renvoie des gifs cuddle",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            KISS: {
+                name: "kiss",
+                aliases: ['kiss'],
+                category: 'action',
+                description: "Renvoie des gifs kiss",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            SLAP: {
+                name: "slap",
+                aliases: ['slap'],
+                category: 'action',
+                description: "Renvoie des gifs slap",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            PUNCH: {
+                name: "punch",
+                aliases: ['punch'],
+                category: 'action',
+                description: "Renvoie des gifs punch",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            HUG: {
+                name: "hug",
+                aliases: ['hug'],
+                category: 'action',
+                description: "Renvoie des gifs hug",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            SAD: {
+                name: "sad",
+                aliases: ['sad'],
+                category: 'action',
+                description: "Renvoie des gifs sad",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            BAKA: {
+                name: "baka",
+                aliases: ['baka'],
+                category: 'action',
+                description: "Renvoie des gifs de baka",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            BANG: {
+                name: "bang",
+                aliases: ['bang'],
+                category: 'action',
+                description: "Renvoie des gifs de bang",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            BLUSH: {
+                name: "blush",
+                aliases: ['blush'],
+                category: 'action',
+                description: "Renvoie des gifs de blush",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            CONFUSED: {
+                name: "confused",
+                aliases: ['confused'],
+                category: 'action',
+                description: "Renvoie des gifs confused",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            DAB: {
+                name: "dab",
+                aliases: ['dab'],
+                category: 'action',
+                description: "Renvoie des gifs dabs",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            DANCE: {
+                name: "dance",
+                aliases: ['dance'],
+                category: 'action',
+                description: "Renvoie des gifs dances",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            EVERYONE: {
+                name: "everyone",
+                aliases: ['everyone'],
+                category: 'action',
+                description: "Renvoie des gifs everyone",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            ANONYMOUS: {
+                name: "anonymous",
+                aliases: ['anonymous','ano'],
+                category: 'action',
+                description: "Renvoie des gifs d'anonymous",
+                cooldown: 3,
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
         },
         COLLECTORS: {
             MSGCOLLECTOR: {

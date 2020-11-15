@@ -14,4 +14,4 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(embed)
 }
 
-module.exports.help = MESSAGES.COMMANDS.ANIMALS.CAT
+module.exports.help = MESSAGES.COMMANDS.ACTION.CAT
