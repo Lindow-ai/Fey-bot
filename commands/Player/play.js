@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
         return message.channel.send(`Il y a eu une erreur pour se connecter sur le channel vocal: ${error}`)
     }
 
-    const dispatcher = connection.play(ytdl(args[1]))
+    const dispatcher = connection.play(ytdl(args[0]))
     .on('finish', () => {
         voiceChannel.leave()
     })
